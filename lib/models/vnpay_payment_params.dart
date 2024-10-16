@@ -20,6 +20,7 @@ class VnpayPaymentParams {
   DateTime? vnp_CreateDate;
   String? vnp_OrderType;
   DateTime? vnp_ExpireDate;
+  String? key;
 
   VnpayPaymentParams({
     this.userId,
@@ -36,6 +37,7 @@ class VnpayPaymentParams {
     this.vnp_CreateDate,
     this.vnp_OrderType,
     this.vnp_ExpireDate,
+    this.key,
   });
 
   Map<String, dynamic> toMap() {
@@ -80,3 +82,4 @@ class VnpayPaymentParams {
 
   factory VnpayPaymentParams.fromJson(String source) => VnpayPaymentParams.fromMap(json.decode(source) as Map<String, dynamic>);
 }
+
